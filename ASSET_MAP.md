@@ -6,23 +6,26 @@ This file maps the public components of the MCP4RS Open Earth ecosystem.
 
 | Category | Name | Link | Description |
 | --- | --- | --- | --- |
-| GitHub Repo | MCP4RS Open Earth | https://github.com/MCP4RemoteSensing/mcp4rs-open-earth | Main MCP server and Gradio app. |
-| GitHub Repo | MCP4RS Media Gallery | https://github.com/MCP4RemoteSensing/mcp4rs-media-gallery | Reproducible media-gallery pipeline. |
-| Hugging Face Space | MCP4RS Open Earth | https://huggingface.co/spaces/zlysunshine/mcp4rs-open-earth | Live MCP server demo. |
-| Hugging Face Space | MCP4RS Media Gallery | https://huggingface.co/spaces/zlysunshine/mcp4rs-media-gallery | Live use-case gallery demo. |
-| Hugging Face Dataset | Media Gallery Outputs | https://huggingface.co/datasets/MCP4RemoteSensing/mcp4rs-media-gallery-outputs | Generated outputs, figures, GIFs, and provenance. |
+| <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github&logoColor=white"> | MCP4RS Open Earth | https://github.com/MCP4RemoteSensing/mcp4rs-open-earth | Main MCP server and Gradio app. |
+| <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Repo-181717?logo=github&logoColor=white"> | MCP4RS Media Gallery | https://github.com/MCP4RemoteSensing/mcp4rs-media-gallery | Reproducible media-gallery pipeline. |
+| <img alt="Hugging Face" src="https://img.shields.io/badge/HF-Space-FF9D00?logo=huggingface&logoColor=black"> | MCP4RS Open Earth | https://huggingface.co/spaces/zlysunshine/mcp4rs-open-earth | Live MCP server demo. |
+| <img alt="Hugging Face" src="https://img.shields.io/badge/HF-Space-FF9D00?logo=huggingface&logoColor=black"> | MCP4RS Media Gallery | https://huggingface.co/spaces/zlysunshine/mcp4rs-media-gallery | Live use-case gallery demo. |
+| <img alt="Hugging Face" src="https://img.shields.io/badge/HF-Dataset-FF9D00?logo=huggingface&logoColor=black"> | Media Gallery Outputs | https://huggingface.co/datasets/MCP4RemoteSensing/mcp4rs-media-gallery-outputs | Generated outputs, figures, GIFs, and provenance. |
 
 ## Asset Relationship
 
 ```mermaid
-flowchart TD
-    A["mcp4rs-open-earth repo"] --> B["HF MCP demo Space"]
-    A --> C["MCP tools"]
-    C --> D["mcp4rs-media-gallery repo"]
-    D --> E["HF Media Gallery Space"]
-    D --> F["HF Dataset outputs"]
-    F --> G["Future model training data"]
-    D --> H["Future Agent Skills"]
+flowchart LR
+    classDef live fill:#E8F5E9,stroke:#2E7D32,stroke-width:1px,color:#1B5E20;
+    classDef future fill:#FFF8E1,stroke:#E65100,stroke-width:1px,color:#BF360C;
+
+    A["Open Earth Repo"]:::live --> B["MCP Demo Space"]:::live
+    A --> C["MCP Tools"]:::live
+    C --> D["Media Gallery Repo"]:::live
+    D --> E["Gallery Space"]:::live
+    D --> F["Gallery Dataset"]:::live
+    F --> G["Model Training Data"]:::future
+    D --> H["Agent Skills"]:::future
 ```
 
 ## Asset Roles
@@ -37,10 +40,10 @@ flowchart TD
 
 ## Cross-Linking Checklist
 
-| Location | Links To Add |
-| --- | --- |
-| `mcp4rs-open-earth` README | Ecosystem repo, MCP demo Space, Media Gallery repo, Media Gallery Space, dataset. |
-| `mcp4rs-media-gallery` README | Ecosystem repo, MCP server repo, MCP demo Space, dataset. |
-| MCP demo Space card | GitHub source repo, ecosystem roadmap, Media Gallery Space. |
-| Media Gallery Space card | Gallery repo, dataset, ecosystem roadmap, MCP server repo. |
-| Dataset card | Gallery repo, Gallery Space, ecosystem roadmap, MCP server repo. |
+| Location | Links To Add | Status |
+| --- | --- | --- |
+| `mcp4rs-open-earth` README | Ecosystem repo, MCP demo Space, Media Gallery repo, Media Gallery Space, dataset. | In progress |
+| `mcp4rs-media-gallery` README | Ecosystem repo, MCP server repo, MCP demo Space, dataset. | In progress |
+| MCP demo Space card | GitHub source repo, ecosystem roadmap, Media Gallery Space. | Planned |
+| Media Gallery Space card | Gallery repo, dataset, ecosystem roadmap, MCP server repo. | Planned |
+| Dataset card | Gallery repo, Gallery Space, ecosystem roadmap, MCP server repo. | Planned |
